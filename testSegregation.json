@@ -975,7 +975,133 @@
                 }
             }
         },
-        "backend_and_execution": [],
+        "backend_and_execution": {
+            "test_streams.py": {
+                "TestStreams": {
+                    "line": 33,
+                    "category": "cuda_streams_execution",
+                    "tests": {
+                        "test_stream_weakref": 43,
+                        "test_event_weakref": 48,
+                        "test_stream_enter_exit": 53,
+                        "test_stream_context_graph_break": 93,
+                        "test_stream_input": 121,
+                        "test_local_stream_return": 134,
+                        "test_get_current_stream_return": 152,
+                        "test_get_current_stream_return_different_device": 168,
+                        "test_get_current_stream_return_no_index": 185,
+                        "test_nested_stream_enter_exit": 201,
+                        "test_stream_enter_exit_graph_break": 247,
+                        "test_nested_stream_enter_exit_graph_break": 251,
+                        "test_local_stream_enter_exit": 255,
+                        "test_local_stream_nested_enter_exit": 296,
+                        "test_new_event_api": 340,
+                        "test_new_stream_api": 367,
+                        "test_current_stream_api": 392,
+                        "test_stream_with_mutation": 423,
+                        "test_stream_backward_simple": 473,
+                        "test_stream_backward_sync": 538,
+                        "test_event_tracing": 607,
+                        "test_run_opcheck_fork_join": 638,
+                        "test_run_opcheck_wait_record": 660,
+                        "test_run_opcheck_wait_record_stream": 684,
+                        "test_record_stream_problem_basic": 704,
+                        "test_record_stream_problem_interleaved": 762,
+                        "test_epilogue_copy_streams_inference": 879,
+                        "test_epilogue_copy_streams_external": 911,
+                        "test_epilogue_copy_stream_tracking": 927,
+                        "test_inductor_lowering": 1008,
+                        "test_is_marked_side_effectful": 1021
+                    }
+                }
+            },
+            "test_sdpa.py": {
+                "TestSDPA": {
+                    "line": 22,
+                    "category": "attention_backend_execution",
+                    "tests": {
+                        "test_returns_SDPAParams": 29,
+                        "test_graph_break_SDPAParams": 46,
+                        "test_input_SDPAParams": 65,
+                        "test_intermediate_attr_access_SDPAParams": 83,
+                        "test_sdpa_c_functions_no_graph_break": 103,
+                        "test_cur_sdpa_kernel_backends": 107,
+                        "test_sdpa_kernel_decorator_with_compile": 115
+                    }
+                }
+            },
+            "test_backend.py": {
+                "TestOptimizations": {
+                    "line": 47,
+                    "category": "backend_selection_and_optimizations",
+                    "tests": {
+                        "test_example_inputs": 48,
+                        "test_example_inputs_runtime_use": 76,
+                        "test_eager": 133,
+                        "test_eager_noexcept": 136,
+                        "test_torchscript": 141,
+                        "test_aot_eager": 144,
+                        "test_aot_eager_decomp_partition": 147,
+                        "test_aot_ts": 152,
+                        "test_aot_cudagraphs": 156,
+                        "test_tvm": 160,
+                        "test_intel_gaudi_backend": 166,
+                        "test_list_backends": 169
+                    }
+                },
+                "NormalizeIRTests": {
+                    "line": 177,
+                    "category": "ir_normalization",
+                    "tests": {
+                        "test_inplace_normalize": 178
+                    }
+                },
+                "MPSSupportedTest": {
+                    "line": 194,
+                    "category": "apple_mps_backend",
+                    "tests": {
+                        "test_mps_supported": 196
+                    }
+                },
+                "TestExplainWithBackend": {
+                    "line": 204,
+                    "category": "backend_debugging",
+                    "tests": {
+                        "test_explain_with_backend": 205
+                    }
+                },
+                "TestCustomBackendAPI": {
+                    "line": 253,
+                    "category": "custom_backend_api",
+                    "tests": {
+                        "test_register_backend_api": 256,
+                        "test_aot_autograd_api": 282,
+                        "test_lookup_backend": 302,
+                        "test_lookup_custom_backend": 332,
+                        "test_backend_recompilation": 370,
+                        "test_backend_graph_freeze": 386
+                    }
+                }
+            },
+            "test_device.py": {
+                "TestDeviceGuard": {
+                    "line": 12,
+                    "category": "device_management",
+                    "tests": {
+                        "test_device_guard": 24,
+                        "test_device_guard_no_index": 36
+                    }
+                },
+                "TestCUDADeviceGuard": {
+                    "line": 50,
+                    "category": "cuda_device_management",
+                    "tests": {
+                        "test_device_guard": 60,
+                        "test_device_guard_no_index": 74
+                    }
+                }
+            }
+        },
         "python_semantics_support": [],
         "integration_and_ecosystem": [],
         "debugging_profiling_tooling": [],
