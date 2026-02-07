@@ -1,0 +1,504 @@
+{
+    "project": "pytorch_torchdynamo",
+    "test_root": "test/dynamo",
+    "components": {
+        "graph_capture_tracing": {
+            "test_compile.py": {
+                "InPlaceCompilationTests": {
+                    "line": 24,
+                    "tests": {
+                        "test_compilation": 25,
+                        "test_overwrite_call_impl": 34,
+                        "test_save": 41,
+                        "test_state_dict_save": 55,
+                        "test_jit_save": 69,
+                        "test_compilation_callback": 80,
+                        "test_compile_eager_options": 101,
+                        "test_compilation_callback_with_graph_break": 114,
+                        "test_compilation_constant_hasattr_fail": 146,
+                        "test_compilation_evnum_hasattr_fail": 155,
+                        "test_compilation_name_error": 169,
+                        "test_compilation_tensor_invalid_method": 180,
+                        "test_compilation_nn_module_invalid_method": 192,
+                        "test_torch_script_compilation": 206,
+                        "test_to_sparse_to_dense_with_graph_break": 215,
+                        "test_list_bad_access": 228
+                    }
+                },
+                "PublicTorchCompilerTests": {
+                    "line": 240,
+                    "tests": {
+                        "test_dynamo_signatures": 262
+                    }
+                }
+            },
+            "test_frame_init.py": {
+                "FrameInitTests": {
+                    "line": 80,
+                    "tests": {
+                        "test_frame_init": 81
+                    }
+                }
+            },
+            "test_fx_annotate.py": {
+                "AnnotateTests": {
+                    "line": 20,
+                    "tests": {
+                        "test_annotations": 21,
+                        "test_activation_checkpointing": 68,
+                        "test_activation_checkpointing_annotation_inside": 109,
+                        "test_ac_flex_attention": 148,
+                        "test_as_decorator": 241,
+                        "test_graph_break": 291
+                    }
+                }
+            },
+            "test_fx_passes_pre_grad.py": {
+                "FxPassesPreGradTests": {
+                    "line": 10,
+                    "tests": {
+                        "test_pass_execution_and_save": 12
+                    }
+                }
+            },
+            "test_graph_deduplication.py": {
+                "GraphDededuplicationTests": {
+                    "line": 20,
+                    "tests": {
+                        "test_single_subgraph": 48,
+                        "test_single_subgraph2": 147,
+                        "test_multiple_subgraphs": 240,
+                        "test_dependent_subgraphs": 399,
+                        "test_input_mutation": 456,
+                        "test_input_aliasing": 528,
+                        "test_cycle_detection_no_cycle": 599,
+                        "test_cycle_detection_single_node": 605,
+                        "test_cycle_detection_two_node": 626,
+                        "test_cycle_detection_arg_and_additional_deps": 650,
+                        "test_cycle_detection_simple": 671,
+                        "test_cycle_detection_complex": 682,
+                        "test_autocast_ordering": 717,
+                        "test_output_nodes_last": 855,
+                        "test_mutation_ordering": 971,
+                        "test_tuple_return": 1102,
+                        "test_tuple_inputs": 1124,
+                        "test_param_transfer_to_submodule": 1200
+                    }
+                }
+            },
+            "test_graph_region_tracker.py": {
+                "GraphRegionTrackerTests": {
+                    "line": 11,
+                    "tests": {
+                        "test_get_regions_single_region_group": 33,
+                        "test_get_regions_multiple_region_groups": 58,
+                        "test_no_single_node_regions": 92,
+                        "test_mismatched_arg_shapes": 104,
+                        "test_mismatched_dtypes": 138,
+                        "test_nested_args": 165,
+                        "test_mismatched_global_state": 197,
+                        "test_mutation_tracking_simple": 262,
+                        "test_mutation_tracking_setitem": 280,
+                        "test_mutation_tracking_allow_in_graph": 291,
+                        "test_non_tensor_arg_hashing": 312,
+                        "test_region_sorting": 333,
+                        "test_no_duplicate_tracking": 341
+                    }
+                }
+            },
+            "test_structured_trace.py": {
+                "StructuredTraceTest": {
+                    "line": 210,
+                    "tests": {
+                        "test_compile_id_serialization_deserialization": 294,
+                        "test_schedule": 320,
+                        "test_cudagraphs": 354,
+                        "test_recompiles": 388,
+                        "test_example_fn": 450,
+                        "test_example_training_fn": 482,
+                        "test_dynamo_error": 552,
+                        "test_inductor_error": 573,
+                        "test_ddp_graphs": 620,
+                        "test_graph_breaks": 796,
+                        "test_graph_sizes_dynamic": 839,
+                        "test_guards_recompiles": 884,
+                        "test_dump_file": 924,
+                        "test_codecache": 957,
+                        "test_make_fx_fail_partial": 1015,
+                        "test_chromium_event": 1052,
+                        "test_compiled_autograd_id": 1074,
+                        "test_compiled_autograd_attribution": 1105,
+                        "test_compiled_autograd_chromium": 1151,
+                        "test_recompile_user_contexts": 1169,
+                        "test_recompile_user_contexts_iteration": 1197,
+                        "test_collective_schedule_empty": 1238,
+                        "test_collective_schedule_real": 1252,
+                        "test_runtime_estimates_simple": 1314,
+                        "test_runtime_estimates_mixed": 1373,
+                        "test_tensor_metadata_logging_multiple_ops": 1439,
+                        "test_tensor_metadata_logging": 1475,
+                        "test_tensor_metadata_logging_dynamic_shapes": 1523,
+                        "test_graph_execution_order": 1589
+                    }
+                }
+            },
+            "test_subgraphs.py": {
+                "SubGraphTests": {
+                    "line": 19,
+                    "tests": {
+                        "test_control_flow1": 39,
+                        "test_control_flow2": 50,
+                        "test_control_flow3": 59,
+                        "test_control_flow4": 71,
+                        "test_control_flow5": 81,
+                        "test_capi_call1": 92,
+                        "test_capi_call2": 100,
+                        "test_capi_call3": 108,
+                        "test_indirect_unsupported1": 116,
+                        "test_indirect_unsupported2": 124,
+                        "test_indirect_unsupported3": 134,
+                        "test_stack_state1": 141,
+                        "test_stack_state2": 151,
+                        "test_multigraph": 161,
+                        "test_extended_args": 171,
+                        "test_resume1": 178,
+                        "test_resume2": 191,
+                        "test_resume3": 204,
+                        "test_resume4": 217,
+                        "test_resume5": 230,
+                        "test_start1": 243,
+                        "test_start2": 253,
+                        "test_start3": 263,
+                        "test_start4": 273,
+                        "test_resume_freevars": 295,
+                        "test_restore_state": 306,
+                        "test_restore_range": 315,
+                        "test_restore_range_iter": 330,
+                        "test_pop_after_resume": 340,
+                        "test_dynamic_getitem": 352,
+                        "test_dynamic_kwarg": 363,
+                        "test_dynamic_duck_size": 377,
+                        "test_dynamic_order_dependence": 393,
+                        "test_dynamic_zero_inference": 416,
+                        "test_no_graph_break_on_item": 433,
+                        "test_graph_break_on_item": 444,
+                        "test_resume_paths_join": 454,
+                        "test_resume_with_no_grad1": 481,
+                        "test_resume_with_no_grad2": 496,
+                        "test_resume_with_no_grad3": 510,
+                        "test_resume_tuple_iterator": 525,
+                        "test_tuple_iterator_return": 541,
+                        "test_tuple_iterator_mutate": 566,
+                        "test_enumerate_not_break_graph": 581
+                    }
+                }
+            },
+            "test_trace_rules.py": {
+                "TraceRuleTests": {
+                    "line": 310,
+                    "tests": {
+                        "test_skipfiles_inlinelist": 330,
+                        "test_torch_name_rule_map_updated": 346,
+                        "test_force_inline_torch_function": 379,
+                        "test_force_inline_custom_function": 418,
+                        "test_no_special_handlers_for_torch_non_c_bindings": 460,
+                        "test_almost_impossible_missing_name": 496
+                    }
+                },
+                "TestModuleSurviveSkipFiles": {
+                    "line": 509,
+                    "tests": {
+                        "test_module_survive_skip_files": 517
+                    }
+                },
+                "SingleOpCompileTests": {
+                    "line": 531,
+                    "tests": {
+                        "test_top_level_torch_exp_compiles_through_dynamo": 532
+                    }
+                }
+            },
+            "test_dynamo_decompositions.py": {
+                "TestDynamoDecompositions": {
+                    "line": 10,
+                    "tests": {
+                        "test_addcmul_inplace_decomposition_enabled": 19,
+                        "test_addcmul_inplace_decomposition_disabled": 54,
+                        "test_addcmul_inplace_decomposition_disabled_capture_scalar": 89,
+                        "test_add_inplace_with_alpha_decomposition_enabled": 124,
+                        "test_add_inplace_with_alpha_decomposition_disabled": 156,
+                        "test_add_inplace_with_alpha_decomposition_disabled_capture_scalar": 189,
+                        "test_addcdiv_inplace_decomposition_enabled": 222,
+                        "test_addcdiv_inplace_decomposition_disabled": 257,
+                        "test_addcdiv_inplace_decomposition_disabled_capture_scalar": 292,
+                        "test_foreach_lerp_inplace_decomposition_enabled": 327,
+                        "test_foreach_lerp_inplace_decomposition_disabled": 372,
+                        "test_foreach_lerp_inplace_decomposition_disabled_capture_scalar": 409,
+                        "test_foreach_pow_scalar_decomposition_enabled": 447,
+                        "test_foreach_pow_scalar_decomposition_disabled": 479,
+                        "test_foreach_pow_scalar_decomposition_disabled_capture_scalar": 512
+                    }
+                }
+            },
+            "test_dynamo_ops.py": {
+                "TestTensorMetaProp": {
+                    "line": 51,
+                    "tests": {
+                        "test_inplace_ops_propagate_requires_grad_metadata": 62
+                    }
+                }
+            }
+        },
+        "guard_and_recompile_system": {
+            "test_guard_manager.py": {
+                "GuardManagerTests": {
+                    "line": 71,
+                    "tests": {
+                        "test_guard_debug_info_user_stack": 72,
+                        "test_global_state_guard": 107,
+                        "test_global_state_reason": 144,
+                        "test_global_state_reason_autocast_cache": 151,
+                        "test_python_lambda_leaf_guard": 163,
+                        "test_type_guard": 175,
+                        "test_id_guard": 204,
+                        "test_equals_guard": 220,
+                        "test_default_device_guard": 251,
+                        "test_length_check_guard": 263,
+                        "test_no_hasattr_guard": 270,
+                        "test_tensor_aliasing_guard": 289,
+                        "test_dict_version_guard": 322,
+                        "test_dynamic_indices_guard": 334,
+                        "test_tensor_match_guard": 353,
+                        "test_no_tensor_aliasing_guard": 382,
+                        "test_weakref_alive_guard": 438,
+                        "test_call_function_no_args_guard": 449,
+                        "test_guard_manager_leaf_guard": 457,
+                        "test_attr_guard_manager": 476,
+                        "test_item_guard_manager": 529,
+                        "test_framelocals_accessor": 574,
+                        "test_framelocals_guard_e2e": 592,
+                        "test_dict_getitem_accessor": 619,
+                        "test_globals": 637,
+                        "test_type_manager": 656,
+                        "test_tuple_iterator_getitem": 706,
+                        "test_global_weakref": 730,
+                        "test_lambda_manager": 750,
+                        "test_dict_contains_guard": 780,
+                        "test_dict_guard_manager": 796,
+                        "test_clone": 876,
+                        "test_diff_guard_manager": 915
+                    }
+                },
+                "TypePropagationTests": {
+                    "line": 970,
+                    "tests": {
+                        "test_basic_types": 972
+                    }
+                },
+                "DuplicateGuardTest": {
+                    "line": 1031,
+                    "tests": {
+                        "test_duplicate_guard": 1032
+                    }
+                },
+                "RecursiveDictTagTests": {
+                    "line": 1067,
+                    "tests": {}
+                },
+                "TagSafetyChecks": {
+                    "line": 1076,
+                    "tests": {
+                        "test_immutable_tag_safe": 1084,
+                        "test_dict_tag_safe": 1160,
+                        "test_nn_module_tag_safe": 1255,
+                        "test_nn_module_tag_overridden_getattr_safe": 1310
+                    }
+                },
+                "RecursiveDictGuardTests": {
+                    "line": 1350,
+                    "tests": {
+                        "test_disabling": 1351
+                    }
+                }
+            },
+            "test_guard_serialization.py": {
+                "TestGuardSerializationBase": {
+                    "line": 316,
+                    "tests": {}
+                },
+                "TestGuardSerialization": {
+                    "line": 472,
+                    "tests": {
+                        "test_function_locals": 473,
+                        "test_tensor_match": 482,
+                        "test_not_present_in_generic_dict": 500,
+                        "test_hasattr_serialization": 518,
+                        "test_type_match": 540,
+                        "test_tensor_subclass_metadata_match": 588,
+                        "test_equals_match": 711,
+                        "test_constant_match": 744,
+                        "test_nn_module": 792,
+                        "test_class_match": 808,
+                        "test_closure_match": 824,
+                        "test_sequence_length": 838,
+                        "test_tuple_iterator_len": 871,
+                        "test_range_iterator_match": 906,
+                        "test_dict_version": 948,
+                        "test_dict_contains": 957,
+                        "test_bool_match": 974,
+                        "test_none_match": 987,
+                        "test_id_match": 1000,
+                        "test_id_match_with_config": 1010,
+                        "test_dispatch_key_set_match": 1026,
+                        "test_dual_level": 1043,
+                        "test_functorch_stack_match": 1055,
+                        "test_duplicate_input": 1175,
+                        "test_weakref_alive": 1185,
+                        "test_mapping_keys_check": 1203,
+                        "test_dict_keys_match": 1224,
+                        "test_empty_nn_module_hooks_dict": 1243,
+                        "test_grad_mode": 1269,
+                        "test_grad_mode_loading": 1281,
+                        "test_deterministic_algorithms": 1299,
+                        "test_torch_function_state": 1315,
+                        "test_fsdp_training_state": 1345,
+                        "test_default_device": 1376,
+                        "test_shape_env": 1393,
+                        "test_builtin_match": 1417,
+                        "test_skipped_objects": 1441,
+                        "test_bound_method_input": 1462,
+                        "test_bound_methods_missing": 1475,
+                        "test_bound_methods_empty": 1494,
+                        "test_ddp_module": 1509,
+                        "test_dict_keys_serialization": 1543,
+                        "test_unserializable_sharded_tensor": 1561,
+                        "test_function_with_wrong_fqn": 1601,
+                        "test_c10d_work": 1613,
+                        "test_unused_weakref": 1653,
+                        "test_unused_stream": 1663,
+                        "test_unused_process_group": 1678,
+                        "test_unserializable_submodule": 1704,
+                        "test_closure_var_missing": 1713,
+                        "test_bound_method_patched_forward": 1726,
+                        "test_guard_on_key_order_with_cache": 1742,
+                        "test_global_state_guard_filter": 1757,
+                        "test_torch_function_state_filter": 1773,
+                        "test_nested_named_tuple": 1789,
+                        "test_sdp_backend_serialization": 1802,
+                        "test_source_serialization": 1844
+                    }
+                },
+                "TestGuardSerializationFSDP": {
+                    "line": 1873,
+                    "tests": {
+                        "test_guard_serialization_fsdp_module": 1878
+                    }
+                }
+            },
+            "test_check_type_id.py": {
+                "TestCheckTypeId": {
+                    "line": 20,
+                    "tests": {
+                        "test_type_match_with_different_values": 30,
+                        "test_type_match_with_custom_classes": 84
+                    }
+                }
+            },
+            "test_sources.py": {
+                "SourceTests": {
+                    "line": 19,
+                    "tests": {
+                        "test_is_local": 20,
+                        "test_property_closure": 30,
+                        "test_supported_nodes": 53
+                    }
+                }
+            },
+            "test_skip_guard_eval_unsafe.py": {
+                "RunDiffGuardTests": {
+                    "line": 12,
+                    "tests": {
+                        "test_bool_recompile": 13,
+                        "test_tensor_recompile": 34,
+                        "test_post_recompile": 55,
+                        "test_fail_on_tensor_shape_change": 100,
+                        "test_cache_line_pickup": 118
+                    }
+                }
+            },
+            "test_recompiles.py": {
+                "RecompileTests": {
+                    "line": 10,
+                    "tests": {
+                        "test_inline_inbuilt_nn_modules_candidate": 11,
+                        "test_automatic_dynamic_reduce_recompiles": 59,
+                        "test_recompiles_true_false_flop": 119,
+                        "test_automatic_dynamic_tensor_scalar_change": 168,
+                        "test_aliasing_guard_failures": 215,
+                        "test_object_alias_relation_guards_without_lambda": 249,
+                        "test_aliasing_guard_failures_with_globals": 275,
+                        "test_dynamic_shape_parameter_recompile": 300,
+                        "test_simple_module_recompile": 372,
+                        "test_no_recursive_compile_after_cache_limit_hit": 394,
+                        "test_automatic_dynamic_on_closed_ints": 412,
+                        "test_run_mode_after_cache_limit_hit": 430,
+                        "test_automatic_dynamic_shapes_mark_as_unbacked": 457,
+                        "test_ambient_autocast_recompile": 471,
+                        "test_autocast_constant_fold": 492,
+                        "test_dunder_call_recompile": 519,
+                        "test_no_recompile_over_unused_objects": 544
+                    }
+                }
+            },
+            "test_recompile_ux.py": {
+                "RecompileUxTests": {
+                    "line": 20,
+                    "tests": {
+                        "test_drop_cache_on_skip": 31,
+                        "test_loop_torture": 59,
+                        "test_dynamic_input": 86,
+                        "test_nvfuser_guards": 113,
+                        "test_verbose_tensor_check": 148,
+                        "test_mismatched_type": 194,
+                        "test_fail_on_recompile_limit_hit": 214,
+                        "test_multiple_guard_fails": 227,
+                        "test_multiple_guard_fails_report_all": 257,
+                        "test_recompile_child_run_only": 295
+                    }
+                }
+            },
+            "test_resume.py": {
+                "ResumeFunctionTests": {
+                    "line": 24,
+                    "tests": {
+                        "test_freevars": 25
+                    }
+                }
+            },
+            "test_dynamic_shapes.py": {
+                "type": "dynamic_generator",
+                "line": 1,
+                "wraps": [
+                    "test_aot_autograd.py",
+                    "test_ctx_manager.py",
+                    "test_export.py",
+                    "test_functions.py",
+                    "test_higher_order_ops.py",
+                    "test_misc.py",
+                    "test_modules.py",
+                    "test_repros.py",
+                    "test_sdpa.py",
+                    "test_subgraphs.py"
+                ]
+            }
+        },
+        "graph_breaks_and_fallback": [],
+        "autograd_and_aot": [],
+        "backend_and_execution": [],
+        "python_semantics_support": [],
+        "integration_and_ecosystem": [],
+        "debugging_profiling_tooling": [],
+        "configuration_and_context": [],
+        "utilities_and_infra": []
+    }
+}
