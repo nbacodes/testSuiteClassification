@@ -1695,7 +1695,216 @@
                 }
             }
         },
-        "configuration_and_context": [],
+        "configuration_and_context": {
+            "test_config.py": {
+                "ConfigTests": {
+                    "line": 12,
+                    "tests": {
+                        "test_no_automatic_dynamic": 14,
+                        "test_automatic_dynamic": 29,
+                        "test_no_assume_static_by_default": 46,
+                        "test_config_compile_ignored": 62,
+                        "test_config_hash": 87
+                    }
+                }
+            },
+            "test_modes.py": {
+                "TorchDispatchModeTests": {
+                    "line": 61,
+                    "tests": {
+                        "test_torch_dispatch_ignore_compile_internals": 70,
+                        "test_skip_torch_dispatch_modes": 118
+                    }
+                },
+                "TorchFunctionModeTests": {
+                    "line": 139,
+                    "tests": {
+                        "test_torch_function_mode_guards_py": 200,
+                        "test_torch_function_mode_guards_cpp": 203,
+                        "test_torch_function_mode_preserves_cuda_rng_state": 207,
+                        "test_stack_state_mutation_default_device": 219,
+                        "test_stack_state_clear_default_device": 238,
+                        "test_pop_torch_function_mode": 292,
+                        "test_is_torch_function_all_disabled": 309,
+                        "test_error_empty_stack_pop_torch_function_mode": 321,
+                        "test_push_torch_function_mode": 333,
+                        "test_len_torch_function_mode": 350,
+                        "test_intermedate_torch_function_mode_construction_mutation": 363,
+                        "test_torch_function_mode_enabled_guard": 376,
+                        "test_nested_torch_function_mode": 390,
+                        "test_torch_function_mode_disable": 449,
+                        "test_torch_function_mode_highest_priority": 488,
+                        "test_torch_function_mode_enter_exit": 510,
+                        "test_torch_function_mode_graph_break": 525,
+                        "test_torch_function_mode_and_pop_graph_break": 541,
+                        "test_torch_function_mode_restore_on_exc": 559,
+                        "test_torch_function_mode_and_pop_graph_break_mutation": 578,
+                        "test_builtin_equivalent_funcs": 600,
+                        "test_expand": 694,
+                        "test_flex_attention": 718,
+                        "test_register_hook": 736,
+                        "test_hop": 759,
+                        "test_hop_eager": 783,
+                        "test_default_device_factory_functions": 803,
+                        "test_default_device_factory_functions_priority": 837
+                    }
+                },
+                "InvokeSubgraphBackendTests": {
+                    "line": 852,
+                    "tests": {
+                        "test_make_fx_over_compiled_function": 854,
+                        "test_same_compiled_fn_called_twice_shares_subgraph": 903,
+                        "test_invoke_subgraph_seq_nr": 957,
+                        "test_guard_failure_creates_separate_subgraphs": 1107,
+                        "test_multiple_inputs": 1165,
+                        "test_multiple_outputs": 1212,
+                        "test_multiple_inputs_and_outputs": 1262,
+                        "test_aot_autograd_over_dynamo_with_requires_grad": 1313
+                    }
+                },
+                "TorchFunctionModeLifecycleTests": {
+                    "line": 1375,
+                    "tests": {
+                        "test_default_device_restored_after_mode_tests": 1376
+                    }
+                }
+            },
+            "test_ctx_manager.py": {
+                "CtxManagerTests": {
+                    "line": 79,
+                    "tests": {
+                        "test_no_grad": 80,
+                        "test_grad_mode_guard": 130,
+                        "test_nested_grad_mode_graph_break": 148,
+                        "test_torch_profiler": 170,
+                        "test_autograd_profiler": 190,
+                        "test_cuda_stream_context_manager1": 211,
+                        "test_cuda_stream_across_graph_break": 236,
+                        "test_cuda_stream_context_manager2": 267,
+                        "test_cuda_stream_method": 303,
+                        "test_cuda_stream_compared_with_constant": 340,
+                        "test_cuda_stream_compared_with_stream": 370,
+                        "test_cuda_event_reconstruct": 413,
+                        "test_cuda_event_across_graph_break": 433,
+                        "test_cuda_event_created_outside_of_graph": 460,
+                        "test_cuda_event_method_create_stream_outside_of_compile": 495,
+                        "test_cuda_event_method": 534,
+                        "test_cuda_device": 574,
+                        "test_autograd_profiler_enabled": 586,
+                        "test_autocast": 611,
+                        "test_cuda_amp_autocast": 641,
+                        "test_is_autocast_cpu_enabled": 665,
+                        "test_autocast_sdpa": 684,
+                        "test_autocast_cpu": 723,
+                        "test_autocast_cpu_graph_break": 748,
+                        "test_autocast_cpu_graph_break_2": 775,
+                        "test_autocast_cpu_graph_break_inner_fn": 793,
+                        "test_autocast_graph_break_method": 840,
+                        "test_autocast_float64": 897,
+                        "test_autocast_device": 923,
+                        "test_autocast_arguments_binding": 949,
+                        "test_autocast_decorator": 971,
+                        "test_generic_ctx_manager_with_graph_break": 1018,
+                        "test_return_context_manager": 1037,
+                        "test_return_context_manager_with_graph_break": 1049,
+                        "test_generic_context_manager": 1068,
+                        "test_nested_generic_context_manager": 1101,
+                        "test_generic_context_manager_with_graph_break_2": 1138,
+                        "test_nested_generic_context_manager_with_graph_break": 1174,
+                        "test_graph_break_inlining_grad": 1212,
+                        "test_graph_break_inlining_autocast": 1252,
+                        "test_disable_saved_tensors_hooks": 1260,
+                        "test_disable_saved_tensors_hooks_prev_disabled": 1300,
+                        "test_disable_saved_tensors_hooks_prev_disabled_nested": 1343,
+                        "test_disable_saved_tensors_hooks_graph_break": 1398,
+                        "test_context_wrapping_grad_mode_decorator": 1449,
+                        "test_context_wrapping_grad_mode_nested_function_decorator": 1479,
+                        "test_context_wrapping_set_grad_enabled_nested_function": 1514,
+                        "test_inactive_context_graph_break_local": 1550,
+                        "test_inactive_context_graph_break_local_nullctx": 1566,
+                        "test_inactive_context_graph_break_local_nullctx2": 1585,
+                        "test_inactive_context_graph_break_stack": 1609,
+                        "test_inactive_context_graph_break_stack2": 1628,
+                        "test_sdpa_kernel_ctx_manager1": 1645,
+                        "test_sdpa_kernel_ctx_manager2": 1669,
+                        "test_sdpa_kernel_ctx_manager3": 1723,
+                        "test_sdpa_kernel_ctx_manager_kwargs": 1757,
+                        "test_sdpa_kernel_ctx_manager_as_decorator": 1780,
+                        "test_sdpa_kernel_ctx_manager_set_priority": 1806,
+                        "test_torch_profiler_use_after_with_block": 1833,
+                        "test_311_resume_block_keyerror": 1849,
+                        "test_311_resume_block_keyerror2": 1873,
+                        "test_store_attr_graph_break_key_error": 1886
+                    }
+                },
+                "ContextlibContextManagerTests": {
+                    "line": 1903,
+                    "tests": {
+                        "test_ctx_basic0": 1918,
+                        "test_ctx_basic1": 1955,
+                        "test_change_parent_nonlocal_0": 1972,
+                        "test_change_parent_nonlocal_1": 2007,
+                        "test_globals_change_in_other_file": 2041,
+                        "test_change_parent_global_0": 2070,
+                        "test_change_parent_global_1": 2104,
+                        "test_change_parent_0": 2137,
+                        "test_change_parent_1": 2161,
+                        "test_graph_break_inside_ctx": 2185,
+                        "test_graph_break_inside_ctx_with_side_effects": 2210,
+                        "test_graph_break_inside_ctx_1": 2238,
+                        "test_graph_break_inside_ctx_2": 2288,
+                        "test_graph_break_before___enter__": 2314,
+                        "test_graph_break_in_finally": 2334,
+                        "test_graph_break_inside___enter__": 2360,
+                        "test_graph_break_after___enter__": 2383,
+                        "test_graph_break_before_and_after___enter__": 2408,
+                        "test_graph_break_before___enter___and_disable___exit__": 2434,
+                        "test_disable___enter__": 2464,
+                        "test_disable___exit__": 2491,
+                        "test_contextmanager_as_argument": 2519,
+                        "test_return_new_contextmanager": 2543,
+                        "test_return_advanced_contextmanager": 2567,
+                        "test_contextmanager_as_argument_only___enter__": 2592,
+                        "test_contextmanager_as_argument_only___exit__": 2622,
+                        "test_advanced_contextmanager_as_argument": 2651,
+                        "test_advanced_contextmanager_as_argument_error": 2673,
+                        "test_disable_ctx_manager": 2697,
+                        "test_graph_break_and_disable___enter__": 2721,
+                        "test_dynamo_disable_ctx": 2751,
+                        "test_disable_trace_contextmanager": 2776,
+                        "test_contextlib_suppress": 2802,
+                        "test_contextlib_nullcontext": 2829,
+                        "test_WITH_EXCEPT_START": 2844
+                    }
+                }
+            },
+            "test_precompile_context.py": {
+                "PrecompileContextTests": {
+                    "line": 19,
+                    "tests": {
+                        "test_basic": 29,
+                        "test_serialize_by_key": 49,
+                        "test_editable": 71
+                    }
+                }
+            },
+            "test_metrics_context.py": {
+                "TestMetricsContext": {
+                    "line": 7,
+                    "tests": {
+                        "test_context_exists": 16,
+                        "test_nested_context": 30,
+                        "test_set": 43,
+                        "test_set_disallow_overwrite": 54,
+                        "test_update_disallow_overwrite": 65,
+                        "test_update_allow_overwrite": 74,
+                        "test_add_to_set": 84,
+                        "test_set_key_value": 98,
+                        "test_top_n": 107
+                    }
+                }
+            }
+        },
         "utilities_and_infra": []
     }
 }
