@@ -1329,7 +1329,159 @@
                 }
             }
         },
-        "integration_and_ecosystem": [],
+        "integration_and_ecosystem": {
+            "test_streams.py": {
+                "TestStreams": {
+                    "line": 33,
+                    "category": "cuda_streams",
+                    "tests": {
+                        "test_stream_weakref": 43,
+                        "test_event_weakref": 48,
+                        "test_stream_enter_exit": 53,
+                        "test_stream_context_graph_break": 93,
+                        "test_stream_input": 121,
+                        "test_local_stream_return": 134,
+                        "test_get_current_stream_return": 152,
+                        "test_get_current_stream_return_different_device": 168,
+                        "test_get_current_stream_return_no_index": 185,
+                        "test_nested_stream_enter_exit": 201,
+                        "test_stream_enter_exit_graph_break": 247,
+                        "test_nested_stream_enter_exit_graph_break": 251,
+                        "test_local_stream_enter_exit": 255,
+                        "test_local_stream_nested_enter_exit": 296,
+                        "test_new_event_api": 340,
+                        "test_new_stream_api": 367,
+                        "test_current_stream_api": 392,
+                        "test_stream_with_mutation": 423,
+                        "test_stream_backward_simple": 473,
+                        "test_stream_backward_sync": 538,
+                        "test_event_tracing": 607,
+                        "test_run_opcheck_fork_join": 638,
+                        "test_run_opcheck_wait_record": 660,
+                        "test_run_opcheck_wait_record_stream": 684,
+                        "test_record_stream_problem_basic": 704,
+                        "test_record_stream_problem_interleaved": 762,
+                        "test_epilogue_copy_streams_inference": 879,
+                        "test_epilogue_copy_streams_external": 911,
+                        "test_epilogue_copy_stream_tracking": 927,
+                        "test_inductor_lowering": 1008,
+                        "test_is_marked_side_effectful": 1021
+                    }
+                }
+            },
+            "test_deviceguard.py": {
+                "TestDeviceGuard": {
+                    "line": 12,
+                    "tests": {
+                        "test_device_guard": 24,
+                        "test_device_guard_no_index": 36
+                    }
+                },
+                "TestCUDADeviceGuard": {
+                    "line": 50,
+                    "tests": {
+                        "test_device_guard": 60,
+                        "test_device_guard_no_index": 74
+                    }
+                }
+            },
+            "test_cudagraphs.py": {
+                "TestAotCudagraphs": {
+                    "line": 58,
+                    "category": "cuda_graphs",
+                    "tests": {
+                        "test_basic": 60,
+                        "test_dtoh": 75,
+                        "test_htod": 92,
+                        "test_mutate_input": 107,
+                        "test_mutate_constant": 126,
+                        "test_factory": 145,
+                        "test_mutated_metadata": 162,
+                        "test_dead_fill": 182
+                    }
+                }
+            },
+            "test_backends.py": {
+                "TestOptimizations": {
+                    "line": 47,
+                    "tests": {
+                        "test_example_inputs": 48,
+                        "test_example_inputs_runtime_use": 76,
+                        "test_eager": 133,
+                        "test_eager_noexcept": 136,
+                        "test_torchscript": 141,
+                        "test_aot_eager": 144,
+                        "test_aot_eager_decomp_partition": 147,
+                        "test_aot_ts": 152,
+                        "test_aot_cudagraphs": 156,
+                        "test_tvm": 160,
+                        "test_intel_gaudi_backend": 166,
+                        "test_list_backends": 169
+                    }
+                },
+                "NormalizeIRTests": {
+                    "line": 177,
+                    "tests": {
+                        "test_inplace_normalize": 178
+                    }
+                },
+                "MPSSupportedTest": {
+                    "line": 194,
+                    "tests": {
+                        "test_mps_supported": 196
+                    }
+                },
+                "TestExplainWithBackend": {
+                    "line": 204,
+                    "tests": {
+                        "test_explain_with_backend": 205
+                    }
+                },
+                "TestCustomBackendAPI": {
+                    "line": 253,
+                    "tests": {
+                        "test_register_backend_api": 256,
+                        "test_aot_autograd_api": 282,
+                        "test_lookup_backend": 302,
+                        "test_lookup_custom_backend": 332,
+                        "test_backend_recompilation": 370,
+                        "test_backend_graph_freeze": 386
+                    }
+                }
+            },
+            "test_fake_distributed.py": {
+                "TestFakeDistributed": {
+                    "line": 24,
+                    "tests": {
+                        "test_all_to_all_single_autograd": 34,
+                        "test_device_mesh_get_local_rank": 119,
+                        "test_device_mesh_flatten": 138
+                    }
+                }
+            },
+            "test_interop.py": {
+                "InteropTests": {
+                    "line": 11,
+                    "tests": {
+                        "test_fx_fn": 19,
+                        "test_script_fn": 23,
+                        "test_trace_fn": 27,
+                        "test_staticmethod_script_fn": 31,
+                        "test_vmap_in_graph": 44
+                    }
+                }
+            },
+            "test_torchrec.py": {
+                "TorchRecTests": {
+                    "line": 69,
+                    "tests": {
+                        "test_pooled": 70,
+                        "test_bucketize": 151,
+                        "test_simple": 169
+                    }
+                }
+            }
+        },
         "debugging_profiling_tooling": [],
         "configuration_and_context": [],
         "utilities_and_infra": []
