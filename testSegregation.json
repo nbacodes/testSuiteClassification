@@ -1482,7 +1482,219 @@
                 }
             }
         },
-        "debugging_profiling_tooling": [],
+        "debugging_profiling_tooling": {
+            "test_logging.py": {
+                "LoggingTests": {
+                    "line": 165,
+                    "tests": {
+                        "test_schedule": 172,
+                        "test_fusion": 180,
+                        "test_cudagraphs": 192,
+                        "test_recompiles": 199,
+                        "test_recompiles_closure_variable_hint": 242,
+                        "test_recompiles_nested_closure_variable_hint": 262,
+                        "test_recompiles_closure_variable_attribute_hint": 299,
+                        "test_dynamo_debug_default_off_artifacts": 332,
+                        "test_hierarchical_compile": 339,
+                        "test_dynamo_error": 355,
+                        "test_inductor_error": 386,
+                        "test_ddp_graphs": 436,
+                        "test_open_registration_with_registered_parent": 463,
+                        "test_open_registration": 471,
+                        "test_open_registration_python_api": 479,
+                        "test_directory_based_logging": 485,
+                        "test_all": 502,
+                        "test_graph_breaks": 524,
+                        "test_side_effects": 535,
+                        "test_side_effects_nested_calls": 559,
+                        "test_side_effects_multiple_mutations_same_object": 597,
+                        "test_side_effects_dict_mutations": 645,
+                        "test_side_effects_attribute_mutations": 677,
+                        "test_side_effects_local_list_no_log": 722,
+                        "test_side_effects_local_object_with_log": 737,
+                        "test_side_effects_nn_module_buffer": 775,
+                        "test_side_effects_silent_config": 808,
+                        "test_dump_compile_times": 821,
+                        "test_custom_format_exc": 836,
+                        "test_custom_format": 856,
+                        "test_multiline_format": 883,
+                        "test_trace_source_if_stmt": 913,
+                        "test_trace_source_nested": 935,
+                        "test_trace_source_cond": 969,
+                        "test_trace_source_funcname": 1002,
+                        "test_invalid_artifact_flag": 1023,
+                        "test_invalid_artifact_flag_error_msg": 1027,
+                        "test_distributed_rank_logging": 1051,
+                        "test_trace_call": 1074,
+                        "test_trace_call_prefix": 1107,
+                        "test_trace_call_inline_call": 1125,
+                        "test_trace_call_graph_break": 1162,
+                        "test_guards_recompiles": 1189,
+                        "test_guards_sloc": 1218,
+                        "test_guards_polyfill_sloc": 1240,
+                        "test_guards_sloc_vr": 1256,
+                        "test_global_state_guard_logging": 1275,
+                        "test_cudagraph_static_inputs": 1289,
+                        "test_optimizer_non_static_param": 1303,
+                        "test_autotuning": 1316,
+                        "test_graph_region_expansion": 1331,
+                        "test_default_logging": 1355,
+                        "test_logs_out": 1376,
+                        "test_log_traced_frames": 1418
+                    }
+                }
+            },
+            "test_profiler.py": {
+                "DynamoProfilerTests": {
+                    "line": 13,
+                    "tests": {
+                        "test_dynamo_timed_profiling_isolated": 14,
+                        "test_dynamo_timed_profiling_backend_compile": 32,
+                        "test_profile_dynamic_shapes_runtime": 53,
+                        "test_profile_dynamic_shapes_compilation": 71,
+                        "test_profile_dynamic_shapes_list_compilation": 83,
+                        "test_execution_trace_dynamic_shapes": 94,
+                        "test_profiler_cache_lookup": 109,
+                        "test_profiler_cache_lookup_profiler_step": 142,
+                        "test_profiler_enabled_export": 166,
+                        "test_profiler_dynamo_compiled_region": 194,
+                        "test_dynamo_preserve_record_func": 225,
+                        "test_dynamo_preserve_record_func_with_graph_break": 287,
+                        "test_dynamo_preserve_record_func_spanning_graph_break": 338
+                    }
+                }
+            },
+            "test_dynamo_profiler.py": {
+                "DynamoProfilerTests": {
+                    "line": 18,
+                    "tests": {
+                        "test_function_trace_timing": 19,
+                        "test_pstats_file_loadable": 58
+                    }
+                }
+            },
+            "test_debug_utils.py": {
+                "TestDebugUtils": {
+                    "line": 21,
+                    "tests": {
+                        "test_cast_model_to_fp64_dtype_args": 22,
+                        "test_generate_env_vars_string": 73
+                    }
+                },
+                "TestDebugUtilsDevice": {
+                    "line": 102,
+                    "tests": {
+                        "test_aot_graph_parser": 103,
+                        "test_sym_aot_graph_parser": 190
+                    }
+                },
+                "TestBackendOverrideIntegration": {
+                    "line": 218,
+                    "tests": {
+                        "test_no_override": 263,
+                        "test_override_all_graphs": 267,
+                        "test_override_greater_than": 271,
+                        "test_override_less_than": 275,
+                        "test_override_less_or_equal": 279,
+                        "test_override_single_id": 283,
+                        "test_override_multiple_ids": 287,
+                        "test_override_range": 291,
+                        "test_multiple_rules": 295,
+                        "test_first_rule_wins": 299,
+                        "test_complex_config": 303,
+                        "test_inductor_with_mode": 307
+                    }
+                }
+            },
+            "test_minifier.py": {
+                "MinifierTests": {
+                    "line": 15,
+                    "tests": {
+                        "test_after_dynamo_cpu_compile_error": 32,
+                        "test_after_dynamo_cpu_runtime_error": 37,
+                        "test_after_dynamo_cpu_accuracy_error": 42,
+                        "test_after_dynamo_cuda_compile_error": 48,
+                        "test_after_dynamo_cuda_runtime_error": 54,
+                        "test_after_dynamo_cuda_accuracy_error": 60,
+                        "test_after_dynamo_non_leaf_compile_error": 65,
+                        "test_after_dynamo_cpu_compile_backend_passes": 89,
+                        "test_after_dynamo_cpu_runtime_backend_passes": 92,
+                        "test_after_dynamo_cpu_accuracy_backend_passes": 95,
+                        "test_after_dynamo_cuda_compile_backend_passes": 101,
+                        "test_after_dynamo_cuda_runtime_backend_passes": 107,
+                        "test_after_dynamo_cuda_accuracy_backend_passes": 113,
+                        "test_cpu_cuda_module_after_dynamo": 121,
+                        "test_if_graph_minified": 189
+                    }
+                }
+            },
+            "test_compiler_bisector.py": {
+                "TestCompilerBisector": {
+                    "line": 25,
+                    "tests": {
+                        "test_bad_decomp": 43,
+                        "test_pre_grad": 98,
+                        "test_joint_graph": 131,
+                        "test_rng": 163,
+                        "test_crossref": 182,
+                        "test_emulate_precision_casts": 227,
+                        "test_bad_lowering": 249,
+                        "test_eager_backend": 267,
+                        "test_bisect_pre_grad_graph": 282,
+                        "test_cudagraph_bisect_max": 329
+                    }
+                }
+            },
+            "test_metrics_context.py": {
+                "TestMetricsContext": {
+                    "line": 7,
+                    "tests": {
+                        "test_context_exists": 16,
+                        "test_nested_context": 30,
+                        "test_set": 43,
+                        "test_set_disallow_overwrite": 54,
+                        "test_update_disallow_overwrite": 65,
+                        "test_update_allow_overwrite": 74,
+                        "test_add_to_set": 84,
+                        "test_set_key_value": 98,
+                        "test_top_n": 107
+                    }
+                }
+            },
+            "test_reorder_logs.py": {
+                "IgnoreLogsTests": {
+                    "line": 39,
+                    "tests": {
+                        "test_ignore_logger": 53,
+                        "test_ignore_arbitrary_function_noop": 72,
+                        "test_ignore_function_returns_none": 98,
+                        "test_ignore_function_does_not_conflict_with_reorderable": 128
+                    }
+                },
+                "ReorderLogsTests": {
+                    "line": 161,
+                    "tests": {
+                        "test_dont_reorder_print": 162,
+                        "test_reorder_print": 182,
+                        "test_reorder_warnings": 203,
+                        "test_reorder_print_graph_break": 225,
+                        "test_reorder_custom_log_fn": 245,
+                        "test_constant_mutation": 269
+                    }
+                }
+            },
+            "test_verify_correctness.py": {
+                "TestVerifyCorrectness": {
+                    "line": 62,
+                    "tests": {
+                        "test_example_inputs": 63,
+                        "test_torchscript": 90,
+                        "test_incorrect_verify_true": 98,
+                        "test_incorrect_verify_false": 121
+                    }
+                }
+            }
+        },
         "configuration_and_context": [],
         "utilities_and_infra": []
     }
