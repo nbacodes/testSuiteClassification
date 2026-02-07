@@ -719,7 +719,262 @@
                 }
             }
         },
-        "autograd_and_aot": [],
+        "autograd_and_aot": {
+            "test_aot_autograd.py": {
+                "AotAutogradFallbackTests": {
+                    "line": 49,
+                    "tests": {
+                        "test_LSTM": 50,
+                        "test_mutation": 77,
+                        "test_mutation1": 94,
+                        "test_negative_testing_mutation": 120,
+                        "test_negative_testing": 147,
+                        "test_call_fn_with_non_const_inputs_aot_safe": 156,
+                        "test_call_fn_with_non_const_inputs_aot_unsafe": 186,
+                        "test_call_fn_with_non_const_inputs_aot_unsafe_control_flow": 219,
+                        "test_requires_grad_fake_via_dynamo_recompiles": 300,
+                        "test_double_backward_with_compile": 340,
+                        "test_arg_dupe_via_dynamo_recompiles": 404,
+                        "test_arg_dupe_via_dynamo_recompiles_many_args_param_non_tensor_arg": 448,
+                        "test_arg_dupe_via_dynamo_recompiles_many_with_global": 499,
+                        "test_arg_dupe_via_dynamo_recompiles_many_args_param_non_tensor_arg_list": 538,
+                        "test_arg_dupe_via_dynamo_recompiles_many_args_param": 588,
+                        "test_arg_dupe_via_dynamo_recompiles_many_args": 639,
+                        "test_alias_inputs": 687,
+                        "test_grad_inputs_alias_inputs": 703,
+                        "test_joint_custom_pass": 724,
+                        "test_multiple_aot_autograd_calls_dupe_args": 764,
+                        "test_nn_parameter_construction": 814,
+                        "test_aot_sequence_nr": 826,
+                        "test_split_with_sizes_aot_autograd_cleans_up_traceback_meta": 965,
+                        "test_aot_export_joint_simple_repro": 985,
+                        "test_eager_sequence_nr": 1012,
+                        "test_aot_grad_mode_mutation": 1074,
+                        "test_aot_autograd_raises_invalid_leaf_set": 1111,
+                        "test_aot_autograd_expand_mutation_functionalizes": 1123,
+                        "test_aot_autograd_expand_mutation_backwards": 1136,
+                        "test_data_ptr_access_copy": 1164,
+                        "test_data_ptr_access_fails_in_forward": 1173,
+                        "test_data_ptr_access_fails_in_backward": 1212,
+                        "test_aot_autograd_expand_mutation_error": 1248,
+                        "test_donated_buffer1": 1264,
+                        "test_donated_buffer2": 1284,
+                        "test_donated_buffer3": 1306,
+                        "test_donated_buffer4": 1329,
+                        "test_donated_buffer5": 1360,
+                        "test_donated_buffer6": 1392,
+                        "test_donated_buffer_with_retain_or_create_graph1": 1415,
+                        "test_donated_buffer_with_retain_or_create_graph2": 1432,
+                        "test_donated_buffer_with_retain_or_create_graph3": 1451,
+                        "test_autograd_function_tangent_mutation": 1470,
+                        "test_donated_buffer_with_retain_or_create_graph4": 1498,
+                        "test_inputs_overlapping_with_mutation_recompile": 1556,
+                        "test_different_inputs_overlapping_set_with_mutation": 1579,
+                        "test_no_storage_overlap_guards_no_mutation": 1632,
+                        "test_no_storage_overlap_guards_no_aliasing": 1641,
+                        "test_inputs_overlapping_with_mutation_stress": 1652,
+                        "test_unbacked_activation_specialized_in_inductor": 1738
+                    }
+                }
+            },
+            "test_aot_autograd_cache.py": {
+                "AOTAutogradCacheTests": {
+                    "line": 138,
+                    "tests": {
+                        "test_cache_hot_load": 175,
+                        "test_basic": 290,
+                        "test_vmap": 321,
+                        "test_multi_graph_specialization": 371,
+                        "test_symbol_specialization": 414,
+                        "test_aot_runtime_trace_joint": 452,
+                        "test_clear_fx_graph_cache": 474,
+                        "test_non_bundled_to_bundled_config_change": 516,
+                        "test_view_replay": 545,
+                        "test_invoke_subgraph": 578,
+                        "test_unsafe_mark_cacheable": 599,
+                        "test_fx_graph_cache_off": 636,
+                        "test_compiled_autograd_bypass": 669,
+                        "test_inference_graph_cache_hit_with_compiled_autograd_enabled": 689,
+                        "test_custom_autograd_function_miss": 714,
+                        "test_custom_autograd_function": 770,
+                        "test_custom_autograd_function_with_custom_triton_kernel": 812,
+                        "test_triton_op_cache_invalidation": 942,
+                        "test_triton_op_local_variable_kernel_detection": 998,
+                        "test_triton_op_local_variable_cache_invalidation": 1063,
+                        "test_triton_op_recursive_function_kernel_detection": 1123,
+                        "test_triton_op_kernel_factory_function": 1185,
+                        "test_triton_op_lru_cache_factory_function": 1241,
+                        "test_triton_op_cache_multiple_ops_invalidation": 1309,
+                        "test_autograd_lazy_backward": 1382,
+                        "test_autograd_no_dynamo_trace_backward": 1433,
+                        "test_autograd_function": 1470,
+                        "test_autograd_guard_single_entry": 1521,
+                        "test_autograd_inductor_guards": 1630,
+                        "test_nn_module_with_params_global_constant": 1729,
+                        "test_constant_tensor_device_guards": 1770,
+                        "test_multiple_compile_triton_kernels": 1800,
+                        "test_dynamic_shapes_different_sizes": 1831,
+                        "test_saved_tensors_hooks_autograd_cache": 1865,
+                        "test_saved_tensors_hooks_autograd_cache_symbolic": 1964,
+                        "test_cache_lazy_backward_for_compiled_autograd": 2047,
+                        "test_regional_inductor_basic": 2170,
+                        "test_regional_inductor_with_backward": 2213,
+                        "test_regional_inductor_cache_miss_on_change": 2277
+                    }
+                }
+            },
+            "test_autograd_function.py": {
+                "AutogradFunctionTests": {
+                    "line": 230,
+                    "tests": {
+                        "test_autograd_function_equivalence": 232,
+                        "test_autograd_function_has_graph_break": 245,
+                        "test_linear_setup_context": 258,
+                        "test_materialize_grad": 267,
+                        "test_print_in_bwd": 275,
+                        "test_stride_in_bwd": 285,
+                        "test_enum_arg": 301,
+                        "test_save_for_bwd": 332,
+                        "test_allow_in_graph": 338,
+                        "test_once_differentiable": 364,
+                        "test_classmethod": 390,
+                        "test_function_context_save_and_mark": 407,
+                        "test_function_context_mark_and_save": 417,
+                        "test_multi_output": 427,
+                        "test_data_in_bwd": 450,
+                        "test_requires_grad_in_bwd": 479,
+                        "test_amp_custom_fwd_bwd": 506,
+                        "test_set_materialize_grads_no_graph_break": 535,
+                        "test_user_defined_object_as_input": 556,
+                        "test_tensor_list_as_input": 636,
+                        "test_multiple_different_non_tensor_inputs": 666,
+                        "test_backward_returns_none_for_tensor_input": 711,
+                        "test_function_with_bound_free_variable": 737,
+                        "test_forward_returns_constant": 766,
+                        "test_smoke_from_test_autograd": 789,
+                        "test_tensor_subclass_intermediary_input": 953,
+                        "test_assert_is_contiguous_after_matmul": 1041,
+                        "test_assert_is_contiguous_on_grad_output_directly": 1079,
+                        "test_smuggle_symint_issue_111031": 1160,
+                        "test_needs_input_grad": 1182,
+                        "test_repeated_save_for_backward_calls": 1206,
+                        "test_smuggle_tensor_and_complex_structures": 1242,
+                        "test_int_output": 1268,
+                        "test_mark_non_differentiable": 1298,
+                        "test_mark_multi_output_non_differentiable": 1373,
+                        "test_default_values": 1410,
+                        "test_fwd_no_grad": 1430,
+                        "test_fwd_propogation_correctness": 1454,
+                        "test_tuple_arg": 1486,
+                        "test_triton_kernel_basic": 1514,
+                        "test_triton_kernel_multiple_out": 1545,
+                        "test_nonlocal_list_mutation_in_autograd_function": 1579,
+                        "test_rewired_bwd_output": 1615,
+                        "test_udf_output": 1704,
+                        "test_aliasing_output": 1790,
+                        "test_nn_module_dataclasses_as_inputs": 1851,
+                        "test_nn_module_dataclasses_as_io": 1950
+                    }
+                }
+            },
+            "test_fwd_loss_bwd.py": {
+                "TestForwardLossBackward": {
+                    "line": 24,
+                    "tests": {
+                        "test_autograd_grad_basic": 56,
+                        "test_autograd_grad_with_kwargs": 129,
+                        "test_autograd_grad_single_tensor": 195,
+                        "test_autograd_grad_double_backward_outside_compile": 264,
+                        "test_autograd_grad_with_external_grad_fn_as_grad_target": 298,
+                        "test_autograd_grad_rejects_external_grad_fn_on_output": 323,
+                        "test_autograd_grad_manual_update_matches_eager": 354,
+                        "test_autograd_grad_rejects_external_grad_fn_from_outer_scope": 384,
+                        "test_autograd_grad_with_unrelated_requires_grad_output": 411,
+                        "test_autograd_grad_missing_detach_errors_like_eager": 514,
+                        "test_autograd_grad_consumed_intermediate_tensor": 569,
+                        "test_autograd_grad_external_grad_fn_detached": 608,
+                        "test_autograd_grad_rejects_external_gradient_edge": 627,
+                        "test_autograd_grad_rejects_tuple_of_external_gradient_edges": 658,
+                        "test_autograd_grad_returning_input_tensor": 692,
+                        "test_autograd_grad_gradient_penalty": 713,
+                        "test_autograd_grad_with_tensor_subclass": 779,
+                        "test_autograd_grad_double_consumption_detected": 806,
+                        "test_tensor_backward_basic": 844,
+                        "test_tensor_backward_without_inputs": 888,
+                        "test_tensor_backward_with_gradient": 931,
+                        "test_tensor_backward_accumulates_grads": 977,
+                        "test_backward_on_no_grad_tensor": 1038,
+                        "test_autograd_grad_with_ingraph_nn_parameter": 1058,
+                        "test_tensor_backward_with_ingraph_nn_parameter": 1115,
+                        "test_tensor_backward_duplicate_inputs": 1141,
+                        "test_tensor_backward_non_leaf_inputs": 1171,
+                        "test_tensor_should_accumulate_in_same_tensor": 1194
+                    }
+                }
+            },
+            "test_python_autograd.py": {
+                "TestPythonAutograd": {
+                    "line": 206,
+                    "tests": {
+                        "test_forwards1": 224,
+                        "test_forwards2": 233,
+                        "test_backwards1": 244,
+                        "test_backwards2": 253,
+                        "test_split": 265
+                    }
+                }
+            },
+            "test_activation_checkpointing.py": {
+                "ActivationCheckpointingViaTagsTests": {
+                    "line": 172,
+                    "tests": "large_suite (~40+ tests, see file for full listing)"
+                }
+            },
+            "test_activation_offloading.py": {
+                "ActivationOffloadingTests": {
+                    "line": 49,
+                    "tests": {
+                        "test_partitioner_offload": 75,
+                        "test_inductor_offload": 113,
+                        "test_partitioner_offload_sep_stream": 140,
+                        "test_partitioner_offload_sep_stream_accuracy": 192,
+                        "test_partitioner_offload_sep_stream_reorder": 222,
+                        "test_partitioner_offload_sep_stream_reorder_accuracy": 277
+                    }
+                },
+                "DefaultPartitionerActivationOffloadingTests": {
+                    "line": 317,
+                    "tests": {
+                        "test_default_partitioner_offload": 346,
+                        "test_default_partitioner_offload_sep_stream": 387,
+                        "test_default_partitioner_offload_accuracy": 442
+                    }
+                }
+            },
+            "test_backward_higher_order_ops.py": {
+                "BackwardHigherOrderOpTests": {
+                    "line": 27,
+                    "tests": {
+                        "test_invoke_in_eager": 28,
+                        "test_invoke_in_pt2": 41,
+                        "test_invoke_make_fx_forward_contrived": 57,
+                        "test_invoke_make_bw": 72,
+                        "test_invoke_in_pt2_compiled_autograd": 98,
+                        "test_invoke_in_pt2_compiled_autograd_side_effect": 196,
+                        "test_invoke_in_pt2_compiled_autograd_graph_breaks": 286
+                    }
+                }
+            },
+            "test_after_aot.py": {
+                "TestAfterAot": {
+                    "line": 23,
+                    "tests": {
+                        "test_save_graph_repro": 25,
+                        "test_dump_tensor": 80
+                    }
+                }
+            }
+        },
         "backend_and_execution": [],
         "python_semantics_support": [],
         "integration_and_ecosystem": [],
