@@ -644,6 +644,175 @@
                     "tests": {}
                 }
             }
+        },
+        "compilation_pipeline": {
+            "test_compile.py": {
+                "TestStandaloneInductor": {
+                    "line": 62,
+                    "tests": {
+                        "test_inductor_via_fx": 68,
+                        "test_inductor_via_fx_tensor_return": 76,
+                        "test_inductor_via_fx_dict_input": 84,
+                        "test_inductor_via_make_fx": 92,
+                        "test_inductor_via_bare_module": 100,
+                        "test_inductor_via_export1": 109,
+                        "test_inductor_via_export2": 118,
+                        "test_inductor_via_op_with_multiple_outputs": 127,
+                        "test_inductor_generate_debug_compile": 140,
+                        "test_inductor_generate_debug_symbol": 187
+                    }
+                }
+            },
+            "test_compile_worker.py": {
+                "TestCompileWorker": {
+                    "line": 19,
+                    "tests": {
+                        "test_basic_jobs": 24,
+                        "test_exception": 35,
+                        "test_crash": 48,
+                        "test_quiesce": 64,
+                        "test_quiesce_repeatedly": 77,
+                        "test_logging": 94
+                    }
+                },
+                "TestCompileWorkerWithTimer": {
+                    "line": 108,
+                    "tests": {}
+                },
+                "TestTimer": {
+                    "line": 113,
+                    "tests": {
+                        "test_basics": 114,
+                        "test_repeated_calls": 126,
+                        "test_never_fires": 140,
+                        "test_spammy_calls": 152
+                    }
+                }
+            },
+            "test_compile_subprocess.py": {
+                "TestSubprocess": {
+                    "line": 80,
+                    "tests": {
+                        "test_progressive": 112,
+                        "test_async": 190
+                    }
+                },
+                "CpuTests": {
+                    "line": 260,
+                    "tests": {}
+                },
+                "GPUTests": {
+                    "line": 270,
+                    "tests": {}
+                }
+            },
+            "test_async_compile.py": {
+                "TestAsyncCompile": {
+                    "line": 26,
+                    "tests": {
+                        "test_pool": 30,
+                        "test_bad_kernel": 47,
+                        "test_wait_pool_ready": 60,
+                        "test_autotune_lookup_table": 72
+                    }
+                }
+            },
+            "test_compiled_autograd.py": {
+                "TestCompiledAutograd": {
+                    "line": 130,
+                    "tests": {
+                        "test_hipify_not_loaded_with_import_torch": 180,
+                        "test_hipify_not_loaded_with_import_cpp_extension": 187,
+                        "test_dynamo_flaky_segfault": 194,
+                        "test_reset": 235,
+                        "test_basic": 257,
+                        "test_cache_hit": 275,
+                        "test_graph_break_custom_op": 294,
+                        "test_tensor_grad_hook1": 314,
+                        "test_tensor_grad_hook2": 332,
+                        "test_tensor_grad_hook3": 349,
+                        "test_reorder_acc_grad": 366,
+                        "test_reorder_post_hook1": 400,
+                        "test_reorder_post_hook2": 454,
+                        "test_reorder_post_hook3": 473,
+                        "test_reorder_all_bwd_hooks": 491,
+                        "test_reorder_multi_post_hooks": 554,
+                        "test_reorder_multi_pre_hooks": 610,
+                        "test_reorder_multi_tensor_pre_hooks": 658,
+                        "test_torch_compile": 706,
+                        "test_compile_api": 727,
+                        "test_compile_api_disable": 764,
+                        "test_optimize_assert": 801,
+                        "test_nested_context_manager": 831,
+                        "test_nested_compile": 855,
+                        "test_no_nested_compiled_autograd": 886,
+                        "test_multiple_torch_compile": 912,
+                        "test_torch_compile_graph_break": 945,
+                        "test_torch_compile_graph_break2": 963,
+                        "test_torch_compile_only_backward_call": 984,
+                        "test_dynamo_boxed": 998,
+                        "test_dynamic_shapes": 1323,
+                        "test_dynamic_shapes_from_forward": 1345,
+                        "test_dynamic_shapes_eager_node": 1385,
+                        "test_dynamic_shapes_annotations": 1411,
+                        "test_torch_compile_api_dynamic_shapes": 1430
+                    }
+                }
+            },
+            "test_compiled_optimizers.py": {
+                "CompiledOptimizerParityTests": {
+                    "line": 588,
+                    "tests": {
+                        "test_correctness": 593
+                    }
+                },
+                "CompiledOptimizerTests": {
+                    "line": 700,
+                    "tests": {
+                        "test_static_address_finalizer": 743,
+                        "test_guard_on_none_grads": 771,
+                        "test_basic_shampoo": 806,
+                        "test_closure_graph_break": 875,
+                        "test_get_value_on_static_address": 902,
+                        "test_compile_time_smoketest": 918,
+                        "test_S429861": 935,
+                        "test_foreach_map_adam": 954
+                    }
+                }
+            },
+            "test_control_flow.py": {
+                "CondTests": {
+                    "line": 292,
+                    "tests": {
+                        "test_cond_simple_control_flow": 338,
+                        "test_cond_subgraph_output_stride_padding": 351,
+                        "test_cond_simple_with_int_closure": 361,
+                        "test_cond_unbacked_symint_closure": 375,
+                        "test_cond_nested_control_flow": 427,
+                        "test_cond_multiple_outputs": 459
+                    }
+                },
+                "WhileLoopTests": {
+                    "line": 1156,
+                    "tests": {
+                        "test_while_loop_simple_control_flow": 1271,
+                        "test_while_loop_nested_control_flow": 1289,
+                        "test_while_loop_with_outer_code": 1308,
+                        "test_while_loop_with_parameters": 1326
+                    }
+                }
+            },
+            "test_control_deps.py": {
+                "TestControlDeps": {
+                    "line": 16,
+                    "tests": {
+                        "test_control_deps_prevents_fusion": 19,
+                        "test_control_deps_do_not_extend_buffer_lifetime": 74,
+                        "test_control_deps_with_nested_args": 120,
+                        "test_control_deps_with_triton_kernel": 179
+                    }
+                }
+            }
         }
     }
 }
