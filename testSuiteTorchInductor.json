@@ -337,6 +337,89 @@
                     "tests": {}
                 }
             }
+        },
+        "functionalization_and_mutation": {
+            "test_auto_functionalize.py": {
+                "TestAutoFunctionalize": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_foreach.py": {
+                "ForeachTests": {
+                    "line": 216,
+                    "tests": {
+                        "test_foreach_cpp_wrapper_cuda": 276,
+                        "test_single_list": 284,
+                        "test_single_scalar": 290,
+                        "test_single_scalar_tensor": 296,
+                        "test_scheduler_fusion_list": 302,
+                        "test_scheduler_fusion_scalar": 330,
+                        "test_broadcasting": 347,
+                        "test_singleton_lists": 366,
+                        "test_type_promotion": 403,
+                        "test_kernel_split_arg_limit_list": 424,
+                        "test_kernel_split_arg_limit_scalar": 449,
+                        "test_fusion_duplicate_buffer_list": 466,
+                        "test_non_foreach_consumer_list": 490,
+                        "test_non_foreach_consumer_scalar": 518,
+                        "test_non_foreach_producer_list": 535,
+                        "test_non_foreach_producer_scalar": 565,
+                        "test_non_foreach_consumer_producer_list": 585,
+                        "test_non_foreach_consumer_producer_scalar": 627,
+                        "test_dynamic_shapes_fallback": 655,
+                        "test_enable_dynamic_shapes_python_wrapper": 674,
+                        "test_enable_dynamic_shapes_cpp_wrapper_cuda": 694,
+                        "test_cpu_cpp_fallback": 714,
+                        "test_decomp": 731,
+                        "test_fuse_concat": 750,
+                        "test_zero_elems": 773,
+                        "test_2d_blocking": 791,
+                        "test_2d_blocking_partitioning": 809,
+                        "test_2d_blocking_partitioning_elems": 827,
+                        "test_2d_blocking_partitioning_mixed_sizes": 850,
+                        "test_reinplacing": 872,
+                        "test_reinplacing_mut_before": 890,
+                        "test_reinplacing_mut_after": 909,
+                        "test_multi_device": 927,
+                        "test_aliasing": 945,
+                        "test_2d_block_no_mixed_sizes_no_mask": 968,
+                        "test_2d_block_mixed_sizes_with_mask": 990,
+                        "test_foreach_map_backward_binary": 1012,
+                        "test_foreach_map_input_mutation": 1052,
+                        "test_addcmul_scalar_value_vs_tensor_value": 1112,
+                        "test_foreach_scalar_vs_scalar_tensor": 1199,
+                        "test_adam_ema_update_scalar_precision": 1265,
+                        "test_foreach_map_backward_unary": 1316,
+                        "test_foreach_addcmul_fma_bitwise_equal": 1348,
+                        "test_foreach_addcmul_uses_fma_instruction": 1395
+                    }
+                }
+            },
+            "test_binary_folding.py": {
+                "BinaryFoldingTemplate": {
+                    "line": 39,
+                    "tests": {
+                        "test_conv_binary_folding": 41,
+                        "test_conv_bn_folding": 158,
+                        "test_linear_binary_folding": 227
+                    }
+                },
+                "FreezingCpuTests": {
+                    "line": 341,
+                    "tests": {}
+                },
+                "FreezingGpuTests": {
+                    "line": 350,
+                    "tests": {}
+                }
+            },
+            "test_auto_chunker.py": {
+                "TestAutoChunker": {
+                    "line": 1,
+                    "tests": {}
+                }
+            }
         }
     }
 }
