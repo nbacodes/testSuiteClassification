@@ -813,6 +813,175 @@
                     }
                 }
             }
+        },
+        "cache_and_config": {
+            "test_cache.py": {
+                "CacheTest": {
+                    "line": 156,
+                    "tests": {
+                        "test_get": 160,
+                        "test_insert": 190,
+                        "test_get_concurrent": 218,
+                        "test_insert_concurrent": 251,
+                        "test_combo_concurrent": 292
+                    }
+                },
+                "AsyncCacheTest": {
+                    "line": 347,
+                    "tests": {
+                        "test_get_async": 351,
+                        "test_insert_async": 392,
+                        "test_get_async_concurrent": 430,
+                        "test_insert_async_concurrent": 463,
+                        "test_combo_async_concurrent": 508
+                    }
+                },
+                "OtherTest": {
+                    "line": 564,
+                    "tests": {
+                        "test_in_memory_cache_from_env_var": 569,
+                        "test_in_memory_cache_from_env_var_missing_comma_separator": 598,
+                        "test_in_memory_cache_from_env_var_bad_encoding": 620,
+                        "test_in_memory_cache_from_env_var_not_un_pickle_able": 642,
+                        "test_in_memory_cache_from_env_var_duplicated_entries": 664,
+                        "test_in_memory_cache_from_file_path": 709,
+                        "test_in_memory_cache_from_file_path_not_un_pickle_able": 733,
+                        "test_in_memory_cache_from_file_path_not_dict": 758,
+                        "test_on_disk_cache_fpath_from_key_un_pickle_able": 772,
+                        "test_on_disk_cache_version_bump": 787
+                    }
+                }
+            },
+            "test_caching.py": {
+                "ImplementationsTest": {
+                    "line": 476,
+                    "tests": {
+                        "test_get": 476,
+                        "test_insert": 494,
+                        "test_insert_will_not_overwrite": 517,
+                        "test_value_encoding": 543,
+                        "test_value_decoding": 564,
+                        "test_version_mismatch": 590
+                    }
+                },
+                "LocksTest": {
+                    "line": 627,
+                    "tests": {
+                        "test_BLOCKING": 652,
+                        "test_NON_BLOCKING": 655,
+                        "test_BLOCKING_WITH_TIMEOUT": 658,
+                        "test_acquire_many_impl_locks_with_timeout": 800
+                    }
+                },
+                "UtilsTest": {
+                    "line": 824,
+                    "tests": {
+                        "test_lru_cache": 825
+                    }
+                },
+                "InterfacesTest": {
+                    "line": 869,
+                    "tests": {
+                        "test_memoizer_record_caches_result": 893,
+                        "test_memoizer_replay_retrieves_cached_result": 919,
+                        "test_memoizer_replay_raises_on_cache_miss": 951,
+                        "test_memoizer_memoize_caches_and_retrieves": 969
+                    }
+                },
+                "ForceDisableCachesTest": {
+                    "line": 1823,
+                    "tests": {
+                        "test_force_disable_caches_disables_caching_module": 1830,
+                        "test_caching_module_enabled_when_force_disable_is_false": 1846,
+                        "test_caching_module_disabled_when_base_config_is_false": 1860,
+                        "test_memoizer_disabled_when_force_disable_caches_true": 1875
+                    }
+                }
+            },
+            "test_codecache.py": {
+                "TestPyCodeCache": {
+                    "line": 143,
+                    "tests": {
+                        "test_linemaps_empty": 144,
+                        "test_editable_cached_wrapper": 153
+                    }
+                },
+                "TestFxGraphCache": {
+                    "line": 253,
+                    "tests": {
+                        "test_cache_load_function": 288,
+                        "test_remote_cache_load_function": 485,
+                        "test_cache_hot_load": 554,
+                        "test_cache_hot_load_repeat": 748,
+                        "test_cache_clear": 1610
+                    }
+                }
+            },
+            "test_remote_cache.py": {
+                "TestAutotuneCache": {
+                    "line": 2997,
+                    "tests": {
+                        "test_autotune_cache_warm_start": 3029,
+                        "test_autotune_cache": 3076,
+                        "test_bundled_autotune_remote_cache": 3115,
+                        "test_modified_autotune_cache": 3177
+                    }
+                },
+                "TestRemoteAOTAutogradCache": {
+                    "line": 3230,
+                    "tests": {
+                        "test_autograd_remote_cache": 3237,
+                        "test_autograd_remote_lazy_backward": 3276
+                    }
+                }
+            },
+            "test_config.py": {
+                "ConfigTest": {
+                    "line": 102,
+                    "tests": {
+                        "test_versioned_config_env_var_override": 129,
+                        "test_versioned_config_version_check": 156,
+                        "test_versioned_config_oss_default": 181,
+                        "test_versioned_config_jk_failure": 202
+                    }
+                },
+                "ContextTest": {
+                    "line": 225,
+                    "tests": {
+                        "test_selected_isolation_context": 252,
+                        "test_all_or_none_isolation_context": 289,
+                        "test_isolation_key_is_distinct": 320,
+                        "test_isolation_key_is_repeatable": 353
+                    }
+                }
+            },
+            "test_metrics.py": {
+                "TestUtils": {
+                    "line": 3320,
+                    "tests": {
+                        "test_fresh_cache": 3322,
+                        "test_force_disable_coordinate_descent": 3352
+                    }
+                }
+            },
+            "test_minifier.py": {
+                "TestMinifier": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_minifier_utils.py": {
+                "TestMinifierUtils": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_minifier_isolate.py": {
+                "TestMinifierIsolate": {
+                    "line": 0,
+                    "tests": {}
+                }
+            }
         }
     }
 }
