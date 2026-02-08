@@ -1,0 +1,158 @@
+{
+    "project": "pytorch_torchinductor",
+    "test_root": "test/inductor",
+    "components": {
+        "graph_analysis_ir": {
+            "test_analysis.py": {
+                "TestUtils": {
+                    "line": 243,
+                    "tests": {
+                        "test_tabulate2d": 244,
+                        "test_zip_dicts": 266
+                    }
+                },
+                "TestAnalysis": {
+                    "line": 280,
+                    "tests": {
+                        "test_noop": 282,
+                        "test_diff": 292,
+                        "test_augment_trace_helper_unit": 335,
+                        "test_triton_has_metadata": 351,
+                        "test_augment_trace_against_flop_counter": 410,
+                        "test_pointwise_bandwidth": 522,
+                        "test_combine_profiles": 559
+                    }
+                }
+            },
+            "test_block_analysis.py": {
+                "BlockAnalysisTest": {
+                    "line": 24,
+                    "tests": {
+                        "test_affine_identity": 40,
+                        "test_mod_div_identity": 63,
+                        "test_subexpr_identity": 92,
+                        "test_index_with_dynamic_shapes": 101
+                    }
+                }
+            },
+            "test_graph_transform_observer.py": {
+                "TestGraphTransformObserver": {
+                    "line": 28,
+                    "tests": {
+                        "test_sdpa_rewriter": 29
+                    }
+                }
+            },
+            "test_fx_fusion.py": {
+                "TestFxFusion": {
+                    "line": 47,
+                    "tests": {
+                        "test_sink_cat_after_pointwise": 48,
+                        "test_linear_permute_fusion": 74,
+                        "test_permute_linear_fusion": 104,
+                        "test_permute_bmm_fusion": 133
+                    }
+                }
+            },
+            "test_fxir_backend.py": {
+                "FxirTestCase": {
+                    "line": 71,
+                    "tests": {
+                        "test_basic": 148,
+                        "test_device_type": 152,
+                        "test_multiple_kernels": 170,
+                        "test_free": 177,
+                        "test_extern": 193,
+                        "test_fallback": 210,
+                        "test_cat_inputs": 234,
+                        "test_cat_views": 245,
+                        "test_cat_to_alloc": 272,
+                        "test_cat_reinterpret_view": 291,
+                        "test_reshape_output": 312,
+                        "test_reshape_fallback": 327,
+                        "test_extern_multi_output": 347,
+                        "test_duplicate_input": 368,
+                        "test_backward": 379,
+                        "test_custom_compiler": 400,
+                        "test_dynamic_shapes_and_strides": 432,
+                        "test_dynamic_shapes_with_padding": 487,
+                        "test_dynamic_shapes_precomputed_size": 522,
+                        "test_dynamic_launch_grid_calc": 538,
+                        "test_debug": 563,
+                        "test_export_const_placeholder": 579,
+                        "test_scatter_fallback_scalar_src": 601,
+                        "test_index_put_fallback": 625,
+                        "test_scatter_reduce_fallback": 643,
+                        "test_cond_subgraph": 665,
+                        "test_cond_no_operands": 687,
+                        "test_cpp_raises": 706,
+                        "test_autotune": 729,
+                        "test_custom_triton": 761,
+                        "test_output_slice_view": 792,
+                        "test_fallback_tuple_constant_arg": 804
+                    }
+                }
+            },
+            "test_fusion_regions.py": {
+                "TestFusionRegionDetection": {
+                    "line": 18,
+                    "tests": {
+                        "test_fusion_region_grouping": 25,
+                        "test_mm_not_in_fusion_region": 48,
+                        "test_strict_local_fusion_no_cross_mm": 60,
+                        "test_collapse_and_expand_fusion_regions": 106,
+                        "test_is_fusible_node": 147,
+                        "test_collapse_expand_preserves_correctness": 176
+                    }
+                }
+            },
+            "test_indexing.py": {
+                "TestIndexingSimplification": {
+                    "line": 38,
+                    "tests": {
+                        "test_indexing_simplification": 39,
+                        "test_indexing_join": 123,
+                        "test_modular_indexing_pairs_merged": 183,
+                        "test_modular_indexing_pairs_not_merged": 196,
+                        "test_modular_indexing_positive": 208,
+                        "test_expand_floor_div_skipped": 215,
+                        "test_expand_floor_div_applied": 225,
+                        "test_int8_unpack": 237,
+                        "test_floordiv_div_sympy_is_integer_bug": 258
+                    }
+                }
+            },
+            "test_loop_ordering.py": {
+                "TestLoopOrdering": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_segmented_tree.py": {
+                "TestSegmentedTree": {
+                    "line": 44,
+                    "tests": {
+                        "test_basic_construction": 46,
+                        "test_empty_array": 51,
+                        "test_max_query_matches_naive": 57,
+                        "test_range_update": 71,
+                        "test_multiple_operations": 95,
+                        "test_single_element_ranges": 118,
+                        "test_full_array_range": 127,
+                        "test_boundary_conditions": 140,
+                        "test_invalid_ranges": 158,
+                        "test_out_of_bounds": 169,
+                        "test_overlapping_updates": 194,
+                        "test_sequential_updates_and_queries": 215
+                    }
+                }
+            },
+            "test_unbacked_symints.py": {
+                "UnbackedSymIntTests": {
+                    "line": 1,
+                    "tests": {}
+                }
+            }
+        }
+    }
+}
