@@ -153,6 +153,108 @@
                     "tests": {}
                 }
             }
+        },
+        "scheduler_and_partitioning": {
+            "test_inductor_scheduler.py": {
+                "TestScheduler": {
+                    "line": 78,
+                    "tests": {
+                        "test_disable_get_estimated_runtime_logging": 81,
+                        "test_flop_counter_op": 120,
+                        "test_fusion_prevent_too_many_reads_and_writes_prevents_fusion": 148,
+                        "test_fusion_prevent_too_many_reads_and_writes_allows_fusion": 173
+                    }
+                }
+            },
+            "test_multi_kernel.py": {
+                "MultiKernelTest": {
+                    "line": 93,
+                    "tests": {
+                        "test_softmax": 94,
+                        "test_triton_gemm": 115,
+                        "test_triton_relu_fused_gemm": 144,
+                        "test_softmax_force_non_persistent_reduction": 172,
+                        "test_softmax_warn_mixed_layout": 204,
+                        "test_layernorm": 211,
+                        "test_inplace_update": 218,
+                        "test_transformer_snippet": 232,
+                        "test_transformer_snippet_with_fallback_random": 253,
+                        "test_batchnorm_training": 261,
+                        "test_pass_same_arg_multi_times": 283,
+                        "test_reduction_scratch_buffer": 307,
+                        "test_split_scan": 332,
+                        "test_sort_disables_multi_kernel": 343
+                    }
+                }
+            },
+            "test_mix_order_reduction.py": {
+                "TestMixOrderReduction": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_select_algorithm.py": {
+                "TestSelectAlgorithm": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_group_batch_fusion.py": {
+                "TestGroupBatchFusion": {
+                    "line": 321,
+                    "tests": {
+                        "test_group_linear_fusion": 357,
+                        "test_group_linear_fusion_different_shapes": 389,
+                        "test_batch_layer_norm_fusion": 421,
+                        "test_batch_linear_lhs_fusion": 443,
+                        "test_batch_linear_pre_grad_fusion": 465,
+                        "test_pointwise_op_fusion": 494,
+                        "test_pointwise_op_fusion_post_grad": 524,
+                        "test_gate_fusion_post_grad": 557,
+                        "test_math_op_fusion": 595,
+                        "test_batch_dropout_pre_grad_fusion": 623
+                    }
+                },
+                "TestPostGradBatchLinearFusion": {
+                    "line": 656,
+                    "tests": {
+                        "test_batch_linear_post_grad_fusion": 657
+                    }
+                },
+                "TestFindIndependentSubsetGreedy": {
+                    "line": 672,
+                    "tests": {
+                        "test_find_independent_subset_greedy": 713,
+                        "test_find_independent_subset_greedy_fuse": 1258
+                    }
+                }
+            },
+            "test_layout_optim.py": {
+                "TestLayoutOptim": {
+                    "line": 38,
+                    "tests": {
+                        "test_2conv_with_graph_break": 125,
+                        "test_3conv_with_graph_break": 131,
+                        "test_keep_output_layout_infer": 161,
+                        "test_keep_output_layout_with_freezing": 190,
+                        "test_training_acc": 198,
+                        "test_mutate_view": 201,
+                        "test_mutate_base": 219,
+                        "test_mutate_base_for_conv_output": 239,
+                        "test_mutate_view_for_conv_output": 257,
+                        "test_dynamic_shape_specialization": 274,
+                        "test_nll_loss_backward": 296
+                    }
+                }
+            },
+            "test_kernel_optimization.py": {
+                "TestKernelOptimization": {
+                    "line": 31,
+                    "tests": {
+                        "test_einsum_to_pointwise": 67
+                    }
+                }
+            }
         }
     }
 }
