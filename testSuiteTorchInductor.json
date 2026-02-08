@@ -255,6 +255,88 @@
                     }
                 }
             }
+        },
+        "memory_planning_and_buffers": {
+            "test_memory.py": {
+                "TestMemory": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_memory_planning.py": {
+                "TestMemoryPlanning": {
+                    "line": 37,
+                    "tests": {
+                        "test_python_wrapper": 58,
+                        "test_cpp_wrapper": 72,
+                        "test_aoti": 85,
+                        "test_unbacked_symint": 107
+                    }
+                }
+            },
+            "test_mem_estimation.py": {
+                "TestMemEstimation": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_inplace_padding.py": {
+                "InplacePaddingTest": {
+                    "line": 48,
+                    "tests": {
+                        "test_skip_pad_due_to_fusion": 49,
+                        "test_skip_pad_input": 65,
+                        "test_pad_non_zero": 83,
+                        "test_pad_non_zero_cpp_wrapper": 115,
+                        "test_pad_too_large": 160,
+                        "test_mutating_padding_input": 173,
+                        "test_mutating_padding_output": 193,
+                        "test_linear_and_cel": 216,
+                        "test_linear_and_cel_max_autotune": 260
+                    }
+                }
+            },
+            "test_inplacing_pass.py": {
+                "TestReinplacingPassCorrectness": {
+                    "line": 86,
+                    "tests": {
+                        "test_dont_modify_live": 101,
+                        "test_dont_modify_view_of_live": 109,
+                        "test_dont_modify_input": 119,
+                        "test_should_modify_inner": 125,
+                        "test_should_modify_input": 133,
+                        "test_counters_functionalize_old": 140,
+                        "test_counters_functionalize_v2": 160,
+                        "test_view_inplaced_functionalize_v2": 199,
+                        "test_view_inplaced2_functionalize_v2": 221,
+                        "test_views_not_inplaced_functionalize_v2": 244,
+                        "test_views_not_inplaced2_functionalize_v2": 268,
+                        "test_views_not_inplaced3_functionalize_v2": 290,
+                        "test_multi_output_intermediate": 311,
+                        "test_multiple_mutations": 331,
+                        "test_multiple_intermediate": 347,
+                        "test_lists_functionalize_v2": 362,
+                        "test_lists_old_functionalize": 389,
+                        "test_generalized_scatter": 418,
+                        "test_partitioner_recomputes_factory": 458,
+                        "test_with_effects_reinplace": 482,
+                        "test_with_effects_reinplace_multiple_mutated_args": 585,
+                        "test_with_effects_reinplace_list_arg": 687
+                    }
+                }
+            },
+            "test_padding.py": {
+                "TestPadding": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_needs_exact_strides.py": {
+                "TestNeedsExactStrides": {
+                    "line": 1,
+                    "tests": {}
+                }
+            }
         }
     }
 }
