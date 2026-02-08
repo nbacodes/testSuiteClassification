@@ -982,6 +982,44 @@
                     "tests": {}
                 }
             }
+        },
+        "correctness_and_safety": {
+            "test_deterministic.py": {
+                "TestDeterministic": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_device_assert.py": {
+                "TestDeviceAssert": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_exc_lowering_stack_trace.py": {
+                "TestExcLoweringStackTrace": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_cpu_repro.py": {
+                "TestCPURepro": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_ordered_set.py": {
+                "TestOrderedSet": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_utils.py": {
+                "TestUtils": {
+                    "line": 0,
+                    "tests": {}
+                }
+            }
         }
     }
 }
