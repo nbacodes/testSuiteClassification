@@ -420,6 +420,91 @@
                     "tests": {}
                 }
             }
+        },
+        "lowering_decomposition_patterns": {
+            "test_custom_lowering.py": {
+                "TestCustomLowering": {
+                    "line": 22,
+                    "tests": {
+                        "test_register_lowering_custom_dict": 152,
+                        "test_jagged_to_padded_dense_sanity_cuda": 172,
+                        "test_jagged_to_padded_dense_zero_size": 198,
+                        "test_tanh_approx": 222,
+                        "test_multi_inp_asm": 236,
+                        "test_constant_creation": 249
+                    }
+                }
+            },
+            "test_external_callables.py": {
+                "TestInductorExternalCallable": {
+                    "line": 36,
+                    "tests": {
+                        "test_matmul_cpu": 46,
+                        "test_matmul_dup": 60,
+                        "test_matmul_cuda": 80
+                    }
+                }
+            },
+            "test_extension_backend.py": {
+                "BaseExtensionBackendTests": {
+                    "line": 55,
+                    "tests": {}
+                },
+                "ExtensionBackendTests": {
+                    "line": 117,
+                    "tests": {
+                        "test_open_device_registration": 119
+                    }
+                }
+            },
+            "test_decompose_mem_bound_mm.py": {
+                "TestDecomposeMemMM": {
+                    "line": 69,
+                    "tests": {
+                        "test_decompose_bmm": 126,
+                        "test_decompose_bmm_cpu": 163,
+                        "test_decompose_linear": 187,
+                        "test_decompose_linear_mixed_precision": 239,
+                        "test_decompose_mm": 286,
+                        "test_decompose_mm_cpu": 324,
+                        "test_decompose_mm_mixed_precision": 355,
+                        "test_dynamic_shape": 393,
+                        "test_realize_input": 430,
+                        "test_check_device": 447,
+                        "test_dynamic_shape_decompose_addmm": 475
+                    }
+                }
+            },
+            "test_pattern_matcher.py": {
+                "TestPatternMatcher": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_mmdecomp.py": {
+                "TestMMDecomposition": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_native_matmul.py": {
+                "TestNativeMatmul": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_op_dtype_prop.py": {
+                "TestOpDtypeProp": {
+                    "line": 1,
+                    "tests": {}
+                }
+            },
+            "test_op_completeness.py": {
+                "TestOpCompleteness": {
+                    "line": 1,
+                    "tests": {}
+                }
+            }
         }
     }
 }
