@@ -1020,6 +1020,32 @@
                     "tests": {}
                 }
             }
+        },
+        "benchmark_and_profiling": {
+            "test_profiler.py": {
+                "TestProfiler": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_benchmarking.py": {
+                "TestBenchmarking": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_benchmark_fusion.py": {
+                "TestBenchmarkFusion": {
+                    "line": 0,
+                    "tests": {}
+                }
+            },
+            "test_perf.py": {
+                "TestPerf": {
+                    "line": 0,
+                    "tests": {}
+                }
+            }
         }
     }
 }
