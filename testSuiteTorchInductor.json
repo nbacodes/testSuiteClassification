@@ -505,6 +505,145 @@
                     "tests": {}
                 }
             }
+        },
+        "aot_inductor": {
+            "test_aot_inductor.py": {
+                "AOTInductorTestsTemplate": {
+                    "line": 175,
+                    "tests": {
+                        "test_simple": 178,
+                        "test_triton_kernel_bool_param": 219,
+                        "test_simple_multi_arch": 248,
+                        "test_small_constant": 283,
+                        "test_output_path_1": 296,
+                        "test_output_path_2": 312,
+                        "test_empty_constant_folding": 336,
+                        "test_constant_folding": 357,
+                        "test_constant_folding_with_update": 374,
+                        "test_duplicate_constant_folding": 451,
+                        "test_autotune_with_constant_folding": 468,
+                        "test_aot_inductor_consts_cpp_build": 497,
+                        "test_multi_device": 598,
+                        "test_large_weight": 620,
+                        "test_constant_type_propagation": 639,
+                        "test_device_moved_constant": 663,
+                        "test_subclasses": 708,
+                        "test_large_mmaped_weights": 737,
+                        "test_large_mmaped_weights_on_disk": 753,
+                        "test_with_offset": 771,
+                        "test_freezing": 795,
+                        "test_conv_freezing": 818,
+                        "test_deconv_freezing": 846,
+                        "test_linear_freezing": 874,
+                        "test_same_backing": 893,
+                        "test_empty_cat_dtype_promotion": 925,
+                        "test_linear_dynamic_maxautotune": 939,
+                        "test_simple_split": 987,
+                        "test_amp_fallback_random": 1004,
+                        "test_missing_output": 1016,
+                        "test_output_misaligned": 1033,
+                        "test_seq": 1084,
+                        "test_addmm": 1096,
+                        "test_buffer_reuse": 1136,
+                        "test_duplicated_params": 1157,
+                        "test_inf": 1171,
+                        "test_nan": 1193,
+                        "test_assert_async": 1215,
+                        "test_simple_dynamic": 1232,
+                        "test_large_dynamic_dim": 1249,
+                        "test_fp8": 1271,
+                        "test_scaled_grouped_mm": 1318,
+                        "test_sdpa": 1594,
+                        "test_sdpa_2": 1619,
+                        "test_quantized_linear": 1639,
+                        "test_zero_grid_with_unbacked_symbols": 1704,
+                        "test_unbacked_expr_replacements": 1726,
+                        "test_replace_unbacked_symbol_with_backed_expr": 1801,
+                        "test_repeat_interleave": 2740,
+                        "test_dynamic_cat": 2751,
+                        "test_buffer_mutation_1": 2767,
+                        "test_non_tensor_input": 2780,
+                        "test_buffer_mutation_2": 2801,
+                        "test_buffer_mutation_3": 2819,
+                        "test_buffer_mutation_4": 2861
+                    }
+                }
+            },
+            "test_aot_inductor_utils.py": {
+                "TestUtils": {
+                    "line": 243,
+                    "tests": {
+                        "test_tabulate2d": 244,
+                        "test_zip_dicts": 266
+                    }
+                }
+            },
+            "test_aot_inductor_package.py": {
+                "TestAOTInductorPackage": {
+                    "line": 100,
+                    "tests": {
+                        "test_add": 212,
+                        "test_remove_intermediate_files": 223,
+                        "test_linear": 257,
+                        "test_compile_after_package": 277,
+                        "test_compile_after_package_multi_arch": 323,
+                        "test_compile_after_package_static": 367,
+                        "test_compile_standalone_cos": 426,
+                        "test_compile_with_exporter": 459,
+                        "test_compile_with_exporter_weights": 509,
+                        "test_metadata": 548,
+                        "test_bool_input": 606,
+                        "test_multiple_methods": 618,
+                        "test_duplicate_calls": 672,
+                        "test_specified_output_dir": 727,
+                        "test_save_buffer": 756,
+                        "test_package_without_weight": 782,
+                        "test_package_user_managed_weight": 816,
+                        "test_deepcopy_compiled_model": 869,
+                        "test_update_weights": 895,
+                        "test_package_shared_weights": 927,
+                        "test_loading_wrong_model": 1041
+                    }
+                }
+            },
+            "test_aot_inductor_arrayref.py": {
+                "AOTInductorTestABICompatibleCpuWithStackAllocation": {
+                    "line": 201,
+                    "tests": {}
+                },
+                "AOTInductorTestABICompatibleCpuWithStackAllocationAndMinimalArrayRefInterface": {
+                    "line": 219,
+                    "tests": {}
+                }
+            },
+            "test_aot_inductor_custom_ops.py": {
+                "AOTInductorTestsTemplate": {
+                    "line": 112,
+                    "tests": {
+                        "test_custom_op_add": 113,
+                        "test_custom_op_add_output_path": 129,
+                        "test_fn_with_optional_tensor_output": 143,
+                        "test_fn_with_optional_tensor_output_2": 155,
+                        "test_fn_with_optional_tensor_nullopt_output": 167,
+                        "test_fn_with_int_output": 181,
+                        "test_custom_op_all_inputs": 195,
+                        "test_custom_op_with_multiple_outputs": 265,
+                        "test_custom_op_out_variant_without_return": 290,
+                        "test_custom_op_with_reinterpret_view_inputs": 305,
+                        "test_custom_op_with_concat_inputs": 316,
+                        "test_custom_op_missing_arg_with_default_value": 330,
+                        "test_custom_op_return_list_of_single_tensor": 341,
+                        "test_custom_op_return_single_tensor": 350,
+                        "test_incorrect_custom_op_schema": 360
+                    }
+                }
+            },
+            "test_aoti_cross_compile_windows.py": {
+                "TestAOTInductorWindowsCrossCompilation": {
+                    "line": 222,
+                    "tests": {}
+                }
+            }
         }
     }
 }
